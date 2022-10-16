@@ -1,5 +1,20 @@
 * {
     font-family: 'Roboto', sans-serif;
+    color: #30384b;
+}
+
+body {
+    background-color: rgb(231 231 231);
+}
+
+.timetable__wrapper  {
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    background-color: rgb(231 231 231);
 }
 
 header {
@@ -15,9 +30,81 @@ header {
     color: white;
     font-weight: 900;
     font-size: 40px;
-    /* text-align: center;
-    padding-top: 15px; */
+}       
+
+.timetable__block {
+    width: 290px;
+    margin-top: 15px;
 }
 
+.timetable__block-day {
+    text-align: center;
+    font-weight: 600;
+    font-size: 26px;
+    color: #30384b;
+}
 
-/* .timetable__block {} */
+.timetable__block-item {
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.timetable__block-title {
+    font-size: 22px;
+}
+
+.timetable__block-subtitle {
+    margin: 8px 0px;
+    font-size: 15px;
+    color: #30384b;
+}
+
+.timetable__block-type-practice {
+    width: 80px;
+    padding: 5px;       
+    border-radius: 8px;
+    background-color: rgb(255 198 91);
+    color: white;
+    text-align: center;
+}
+
+.timetable__block-type-lab {
+    width: 108px;
+    padding: 5px;       
+    border-radius: 8px;
+    background-color: rgb(91 166 255);
+    text-align: center; 
+    color: #fff;
+}
+
+.timetable__block-type-lection {
+    width: 80px;
+    padding: 5px;       
+    border-radius: 8px;
+    background-color: rgb(62 191 62);
+    text-align: center; 
+    color: #fff;
+}
+
+.timetable__block-time {
+    margin-top: 8px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.timetable__block-link {
+    margin-top: 12px;
+    padding: 5px 0;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+.timetable__block-link a {
+    text-decoration: none;
+    font-size: 17px;
+    padding: 5px 72px;
+}
