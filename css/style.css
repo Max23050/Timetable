@@ -13,7 +13,7 @@ body {
     justify-content: space-between;
 }
 
-section {
+.timetable {
     background-color: rgb(231 231 231);
 }
 
@@ -107,4 +107,56 @@ header {
     text-decoration: none;
     font-size: 17px;
     padding: 5px 72px;
+}
+
+#open {
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 15px;
+    width: 264px;
+    height: 31.55px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0;
+    pointer-events: none; */
+    display: none;
+}
+
+.modal-container.show {
+    /* opacity: 1;
+    pointer-events: auto; */
+    display: flex;
+    animation-name: modalAnimation;
+    animation-duration: 0.7s;
+}
+
+@keyframes modalAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal {
+    background-color: #fff;
+    width: 600px;
+    border-radius: 5px;
+    padding: 30px 50px;
+    text-align: center;
 }
