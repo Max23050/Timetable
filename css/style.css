@@ -95,7 +95,7 @@ header {
     font-weight: 600;
 }
 
-.timetable__block-link {
+.timetable__block-link, .modal__item-link {
     margin-top: 12px;
     padding: 5px 0;
     text-align: center;
@@ -109,7 +109,7 @@ header {
     padding: 5px 72px;
 }
 
-#open {
+#open-tuesday, #open-wednesday {
     background-color: #fff;
     border: 1px solid;
     border-radius: 15px;
@@ -120,22 +120,27 @@ header {
     margin-top: 12px;
 }
 
-.modal-container {
+.modal-container-tuesday, .modal-container-wednesday {
     background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
-    /* opacity: 0;
-    pointer-events: none; */
     display: none;
 }
 
-.modal-container.show {
+.modal-container-tuesday.show {
+    /* opacity: 1;
+    pointer-events: auto; */
+    display: flex;
+    animation-name: modalAnimation;
+    animation-duration: 0.7s;
+}
+
+.modal-container-wednesday.show {
     /* opacity: 1;
     pointer-events: auto; */
     display: flex;
@@ -155,8 +160,46 @@ header {
 
 .modal {
     background-color: #fff;
-    width: 600px;
+    width: 500px;
     border-radius: 5px;
     padding: 30px 50px;
+    position: relative;
+    /* text-align: center; */
+}
+
+.modal__title {
     text-align: center;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.modal__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+}
+
+
+.modal__item-title {
+    font-size: 22px;
+}
+
+.modal__item-subtitle {
+    text-align: center;
+    margin-top: 9px;
+    font-size: 17px;
+}
+
+.modal__item-link a {
+    text-decoration: none;
+    padding: 5px 37px;
+}
+
+#close-tuesday, #close-wednesday {
+    position: absolute;
+    top: -10px;
+    right: 6px;
+    font-size: 50px;
+    color: #949494;
+    cursor: pointer;
 }
