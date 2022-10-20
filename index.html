@@ -12,6 +12,23 @@
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
         rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -21,7 +38,7 @@
     <!----Основа------->
     <section class="timetable">
         <div class="container">
-            <div class="timetable__wrapper">
+            <div class="timetable__wrapper-even">
                 <div class="timetable__block">
                     <div class="timetable__block-day">Понедельник</div>
                     <div class="timetable__block-item">
@@ -65,8 +82,8 @@
                         <button id="open-tuesday">Подключиться</button>
                     </div>
                 </div>
-                <div class="modal-container-tuesday" id="modal_container-tuesday">
-                    <div class="modal">
+                <div class="modal-container" id="modal_container">
+                    <div class="modal" id="modal_tuesday">
                         <div class="modal__title">Куда подключаемся?</div>
                         <div class="modal__wrapper">
                             <div class="modal__item">
@@ -80,7 +97,23 @@
                                 <div class="modal__item-link"><a href="#">Подключиться</a></div>
                             </div>
                         </div>
-                        <div id="close-tuesday">&times;</div>
+                        <div class="close" data-modal="close">&times;</div>
+                    </div>
+                    <div class="modal" id="modal_wednesday">
+                        <div class="modal__title">Куда подключаемся?</div>
+                        <div class="modal__wrapper">
+                            <div class="modal__item">
+                                <div class="modal__item-title">Первая подгруппа</div>
+                                <div class="modal__item-subtitle">Воробйова К. В.</div>
+                                <div class="modal__item-link"><a href="#">Подключиться</a></div>
+                            </div>
+                            <div class="modal__item">
+                                <div class="modal__item-title">Вторая подгруппа</div>
+                                <div class="modal__item-subtitle">Попович О. С.</div>
+                                <div class="modal__item-link"><a href="#">Подключиться</a></div>
+                            </div>
+                        </div>
+                        <div class="close" data-modal="close">&times;</div>
                     </div>
                 </div>
                 <div class="timetable__block">
@@ -126,8 +159,116 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-container-wednesday" id="modal_container-wednesday">
-                    <div class="modal">
+                <div class="timetable__block">
+                    <div class="timetable__block-day">Пятница</div>
+                    <div class="timetable__block-item">
+                        <div class="timetable__block-title">История Украины</div>
+                        <div class="timetable__block-subtitle">Шановська О. А.</div>
+                        <div class="timetable__block-type-lection">Лекция</div>
+                        <div class="timetable__block-time">8:00 - 9:35</div>
+                        <div class="timetable__block-link">
+                            <a href="#">Подключиться</a>
+                        </div>
+                    </div>
+                    <div class="timetable__block-item">
+                        <div class="timetable__block-title">Алгоритмизация</div>
+                        <div class="timetable__block-subtitle">Бабилунга О. Ю.</div>
+                        <div class="timetable__block-type-lection">Лекция</div>
+                        <div class="timetable__block-time">9:50 - 11:25</div>
+                        <div class="timetable__block-link">
+                            <a href="#">Подключиться</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="timetable__block">
+                    <div class="timetable__block-day">Суббота</div>
+                    <div class="timetable__block-item">
+                        <div class="timetable__block-title">Вышмат</div>
+                        <div class="timetable__block-subtitle">Желиба Т. О.</div>
+                        <div class="timetable__block-type-practice">Практика</div>
+                        <div class="timetable__block-time">9:50 - 11:25</div>
+                        <div class="timetable__block-link">
+                            <a href="#">Подключиться</a>
+                        </div>
+                    </div>
+                    <div class="timetable__block-item">
+                        <div class="timetable__block-title">Алгоритмизация</div>
+                        <div class="timetable__block-subtitle"> Иванов О. В.</div>
+                        <div class="timetable__block-type-lab">Лабораторная</div>
+                        <div class="timetable__block-time">11:40 - 13:15</div>
+                        <div class="timetable__block-link">
+                            <a href="https://us04web.zoom.us/j/72822539350?pwd=yaDFQzalcdS7SrpPVSaEntk67KBEkm.1">Подключиться</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Нечетная неделя -->
+
+
+            <div class="timetable__wrapper-odd">
+                <div class="timetable__block">
+                    <div class="timetable__block-day">Понедельник</div>
+                    <div class="timetable__block-item">
+                        <div class="timetable__block-title">Комп. Схемотехника</div>
+                        <div class="timetable__block-subtitle">Кузнецов М. О.</div>
+                        <div class="timetable__block-type-lection">Лекция</div>
+                        <div class="timetable__block-time">8:00 - 9:35</div>
+                        <div class="timetable__block-link">
+                            <a href="https://us05web.zoom.us/j/86202994441?pwd=K3UwL3l6L2Q4aExPaVBPaXpocE9ydz09">Подключиться</a>
+                        </div>
+                    </div>
+                    <div class="timetable__block-item">
+                        <div class="timetable__block-title">Комп. Схемотехника</div>
+                        <div class="timetable__block-subtitle">Баранов М. А.</div>
+                        <div class="timetable__block-type-lab">Лабораторная</div>
+                        <div class="timetable__block-time">9:50 - 11:25</div>
+                        <div class="timetable__block-link">
+                            <a href="https://us02web.zoom.us/j/5087637468?pwd=OVNkTDEzSzBiaTdEb1JibUhPNDExQT09">Подключиться</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="timetable__block">
+                    <div class="timetable__block-day">Вторник</div>
+                    <div class="timetable__block-item">
+                        <div class="timetable__block-title">Вышмат</div>
+                        <div class="timetable__block-subtitle">Усов А. В.</div>
+                        <div class="timetable__block-type-lection">Лекция</div>
+                        <div class="timetable__block-time">9:50 - 11:25</div>
+                        <div class="timetable__block-link">
+                            <a href="#">Подключиться</a>
+                        </div>
+                    </div>
+                    <div class="timetable__block-item">
+                        <div class="timetable__block-title">Английский</div>
+                        <div class="timetable__block-subtitle">Гвоздь О. В. / Лебедева О. В.</div>
+                        <div class="timetable__block-type-practice">Практика</div>
+                        <div class="timetable__block-time">11:40 - 13:15</div>
+                        <!-- <div class="timetable__block-link">
+                            <a href="#">Подключиться</a>
+                        </div> -->
+                        <button id="open-tuesday">Подключиться</button>
+                    </div>
+                </div>
+                <div class="modal-container" id="modal_container">
+                    <div class="modal" id="modal_tuesday">
+                        <div class="modal__title">Куда подключаемся?</div>
+                        <div class="modal__wrapper">
+                            <div class="modal__item">
+                                <div class="modal__item-title">Первая подгруппа</div>
+                                <div class="modal__item-subtitle">Лебедева О. В.</div>
+                                <div class="modal__item-link"><a href="#">Подключиться</a></div>
+                            </div>
+                            <div class="modal__item">
+                                <div class="modal__item-title">Вторая подгруппа</div>
+                                <div class="modal__item-subtitle">Гвоздь О. В.</div>
+                                <div class="modal__item-link"><a href="#">Подключиться</a></div>
+                            </div>
+                        </div>
+                        <div class="close" data-modal="close">&times;</div>
+                    </div>
+                    <div class="modal" id="modal_wednesday">
                         <div class="modal__title">Куда подключаемся?</div>
                         <div class="modal__wrapper">
                             <div class="modal__item">
@@ -141,7 +282,50 @@
                                 <div class="modal__item-link"><a href="#">Подключиться</a></div>
                             </div>
                         </div>
-                        <div id="close-wednesday">&times;</div>
+                        <div class="close" data-modal="close">&times;</div>
+                    </div>
+                </div>
+                <div class="timetable__block">
+                    <div class="timetable__block-day">Среда</div>
+                    <div class="timetable__block-item">
+                        <div class="timetable__block-title">Вышмат</div>
+                        <div class="timetable__block-subtitle">Желиба Т. О.</div>
+                        <div class="timetable__block-type-practice">Практика</div>
+                        <div class="timetable__block-time">9:50 - 11:25</div>
+                        <div class="timetable__block-link">
+                            <a href="#">Подключиться</a>
+                        </div>
+                    </div>
+                    <div class="timetable__block-item">
+                        <div class="timetable__block-title">Алгоритмизация</div>
+                        <div class="timetable__block-subtitle"> Иванов О. В.</div>
+                        <div class="timetable__block-type-lab">Лабораторная</div>
+                        <div class="timetable__block-time">11:40 - 13:15</div>
+                        <div class="timetable__block-link">
+                            <a href="https://us04web.zoom.us/j/72822539350?pwd=yaDFQzalcdS7SrpPVSaEntk67KBEkm.1">Подключиться</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="timetable__block">
+                    <div class="timetable__block-day">Четверг</div>
+                    <div class="timetable__block-item">
+                        <div class="timetable__block-title">Физика</div>
+                        <div class="timetable__block-subtitle">Анисимов В. О.</div>
+                        <div class="timetable__block-type-practice">Практика</div>
+                        <div class="timetable__block-time">8:00 - 9:35</div>
+                        <div class="timetable__block-link">
+                            <a href="#">Подключиться</a>
+                        </div>
+                        <!----<button id="open-wednesday">Подключиться</button>----->
+                    </div>
+                    <div class="timetable__block-item">
+                        <div class="timetable__block-title">Физика</div>
+                        <div class="timetable__block-subtitle">Анисимов В. О.</div>
+                        <div class="timetable__block-type-lection">Лекция</div>
+                        <div class="timetable__block-time">9:50 - 11:25</div>
+                        <div class="timetable__block-link">
+                            <a href="#">Подключиться</a>
+                        </div>
                     </div>
                 </div>
                 <div class="timetable__block">

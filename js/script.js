@@ -1,42 +1,59 @@
 const open_tuesday = document.getElementById('open-tuesday');
-const close_tuesday = document.getElementById('close-tuesday');
-const modal_container_tuesday = document.getElementById('modal_container-tuesday');
 const open_wednesday = document.getElementById('open-wednesday');
-const close_wednesday = document.getElementById('close-wednesday');
-const modal_container_wednesday = document.getElementById('modal_container-wednesday');
+const close = document.querySelectorAll('.close');
+const modal_container = document.getElementById('modal_container');
+const modal_tuesday = document.getElementById('modal_tuesday');
+const modal_wednesday = document.getElementById('modal_wednesday');
+const wrapper_even = document.querySelector('.timetable__wrapper-even');
+const wrapper_odd = document.querySelector('.timetable__wrapper-odd');
 
-/* open.addEventListener('click', () => {
-    modal_container.classList.add('show');
-});
 
-close.addEventListener('click', () => {
-    modal_container.classList.remove('show');
-}); */
+// Modal
 
 open_tuesday.onclick = function () {
-    modal_container_tuesday.classList.add('show');
+    modal_container.classList.add('show');
+    modal_tuesday.classList.add('show');
 };
 
-close_tuesday.onclick = function () {
-    modal_container_tuesday.classList.remove('show');
-};
-
-window.onclick = function (e) {
-    if (e.target == modal_container_tuesday) {
-        modal_container_tuesday.classList.remove('show');
-    }
-};
+close.forEach(function (item) {
+    item.addEventListener('click', function() {
+        modal_container.classList.remove('show');
+        modal_tuesday.classList.remove('show');
+        modal_wednesday.classList.remove('show');
+    });
+});
 
 open_wednesday.onclick = function () {
-    modal_container_wednesday.classList.add('show');
-};
-
-close_wednesday.onclick = function () {
-    modal_container_wednesday.classList.remove('show');
+    modal_container.classList.add('show');
+    modal_wednesday.classList.add('show');
 };
 
 window.onclick = function (e) {
-    if (e.target == modal_container_wednesday) {
-        modal_container_wednesday.classList.remove('show');
-    }
+    if (e.target == modal_container) {
+        modal_container.classList.remove('show');
+        modal_tuesday.classList.remove('show');
+        modal_wednesday.classList.remove('show');
+    };
+};
+
+
+// Even / odd week
+
+var elm = document.createElement('input')
+
+elm.type = 'week'
+
+elm.valueAsDate = new Date()
+
+var week = elm.value.split('W').pop()
+
+
+if ( week % 2 == 0 ) {
+    console.log('Четная')
+    wrapper_even.classList.add('current');
+    wrapper_odd.classList.remove('current');
+} else {
+    console.log('Нечетная')
+    wrapper_odd.classList.add('current');
+    wrapper_even.classList.remove('current');
 };
