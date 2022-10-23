@@ -39,16 +39,21 @@ window.onclick = function (e) {
 
 // Even / odd week
 
-var elm = document.createElement('input')
+let elm = document.createElement('input');
 
-elm.type = 'week'
+elm.type = 'week';
 
-elm.valueAsDate = new Date()
+elm.valueAsDate = new Date();
 
-var week = elm.value.split('W').pop()
+let week = elm.value.split('W').pop();
+
+console.log(week);
+
+/* var date = new Date();
+console.log(date.getMinutes()) */
 
 
-if ( week % 2 == 0 ) {
+if ( 43 % 2 == 0 ) {
     console.log('Четная')
     wrapper_even.classList.add('current');
     wrapper_odd.classList.remove('current');
