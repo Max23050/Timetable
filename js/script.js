@@ -50,10 +50,10 @@ let week = elm.value.split('W').pop();
 console.log(week);
 
 /* var date = new Date();
-console.log(date.getMinutes()) */
+console.log(date.getDate()) */
 
 
-if ( 43 % 2 == 0 ) {
+if ( week % 2 == 0 ) {
     console.log('Четная')
     wrapper_even.classList.add('current');
     wrapper_odd.classList.remove('current');
