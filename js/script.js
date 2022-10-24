@@ -1,4 +1,4 @@
-const open_tuesday = document.getElementById('open-tuesday');
+const open_tuesday = document.querySelectorAll('.open-tuesday');
 const open_wednesday = document.getElementById('open-wednesday');
 const close = document.querySelectorAll('.close');
 const modal_container = document.getElementById('modal_container');
@@ -8,12 +8,16 @@ const wrapper_even = document.querySelector('.timetable__wrapper-even');
 const wrapper_odd = document.querySelector('.timetable__wrapper-odd');
 
 
+
 // Modal
 
-open_tuesday.onclick = function () {
-    modal_container.classList.add('show');
-    modal_tuesday.classList.add('show');
-};
+
+open_tuesday.forEach(function (item) {
+    item.addEventListener('click', function() {
+        modal_container.classList.add('show');
+        modal_tuesday.classList.add('show');
+    });
+});
 
 close.forEach(function (item) {
     item.addEventListener('click', function() {
@@ -54,11 +58,11 @@ console.log(date.getDate()) */
 
 
 if ( week % 2 == 0 ) {
-    console.log('Четная')
+    console.log('Четная');
     wrapper_even.classList.add('current');
     wrapper_odd.classList.remove('current');
 } else {
-    console.log('Нечетная')
+    console.log('Нечетная');
     wrapper_odd.classList.add('current');
     wrapper_even.classList.remove('current');
 };
