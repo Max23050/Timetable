@@ -119,7 +119,15 @@ header {
     padding: 5px 72px;
 }
 
-.open-tuesday, #open-wednesday {
+.timetable__block-mon, .timetable__block-tue, .timetable__block-wed, .timetable__block-thu, .timetable__block-fri {
+    display: none;
+}
+
+.timetable__block-mon.current_sat, .timetable__block-tue.current_sat, .timetable__block-wed.current_sat, .timetable__block-thu.current_sat, .timetable__block-fri.current_sat {
+    display: block;
+}
+
+.open-tuesday, .open-wednesday {
     background-color: #fff;
     border: 1px solid;
     border-radius: 15px;
@@ -208,6 +216,7 @@ header {
     color: #949494;
     cursor: pointer;
 }
+
 
 
 /* Adaptive */
@@ -307,4 +316,5 @@ header {
         font-size: 25px;
     }
 }
+
 
