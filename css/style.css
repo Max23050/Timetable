@@ -302,6 +302,7 @@ header {
         left: 0;
         top: 0;
         transform: translate(0, 0);
+        margin-right: 0;
     }
 
     #week {
@@ -311,6 +312,7 @@ header {
         font-size: 17px;
         margin-left: 0;
     }
+
 }
 
 @media (max-width: 575px) {
