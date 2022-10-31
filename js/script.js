@@ -36,7 +36,7 @@ close.forEach(function (item) {
 open_wednesday.forEach(function (item) {
     item.addEventListener('click', function() {
         modal_container.classList.add('show');
-        modal_tuesday.classList.add('show');
+        modal_wednesday.classList.add('show');
     });
 });
 
