@@ -32,15 +32,29 @@ header {
     height: 80px;
     background-color: #343e4d;
     display: flex;
-    justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .header__title {
+    margin: 0;
     color: white;
     font-weight: 900;
     font-size: 40px;
-}       
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#week {
+    margin-left: 124px;
+    border: 7px solid;
+    text-align: center;
+    border-radius: 15px;
+}
+
 
 .timetable__block {
     width: 290px;
@@ -232,9 +246,17 @@ header {
     .timetable__wrapper-even, .timetable__wrapper-odd {
         padding: 0px 65px;
     }
+    
+    #week {
+        margin-left: 57px;
+    }
 }
 
 @media (max-width: 767px) {
+    header {
+        flex-direction: column-reverse;
+    }
+
     .timetable__wrapper-even, .timetable__wrapper-odd {
         justify-content: center;
     }
@@ -268,6 +290,26 @@ header {
 
     .timetable__block-type-lab {
         width: 130px;
+    }
+
+    header {
+        height: 125px;
+        justify-content: center;
+    }
+
+    .header__title {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: translate(0, 0);
+    }
+
+    #week {
+        margin-top: 6px;
+        height: 47px;
+        width: 264px;
+        font-size: 17px;
+        margin-left: 0;
     }
 }
 
