@@ -71,23 +71,23 @@ if ( week % 2 == 0 ) {
 // Saturday script
 
 
-switch(true) {
-    case week == 44: 
+switch(week) {
+    case 44: 
     saturday_monday.classList.add('current_sat');
     saturday_thursday.forEach(function (item) {
         item.classList.remove('current_sat');
     });
       break;
-    case week == 45:
+    case 45:
       saturday_tuesday.classList.add('current_sat');
       saturday_friday.forEach(function (item) {
         item.classList.remove('current_sat');
     });
       break;
-    case week == 46: 
+    case 46: 
       saturday_wednesday.classList.add('current_sat');
       break;
-    case week == 47: 
+    case 47: 
     saturday_friday.forEach(function (item) {
         item.classList.remove('current_sat');
     });
@@ -95,7 +95,7 @@ switch(true) {
         item.classList.add('current_sat');
     });
       break;
-    case week == 48: 
+    case 48: 
     saturday_thursday.forEach(function (item) {
         item.classList.remove('current_sat');
     });
