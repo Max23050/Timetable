@@ -51,18 +51,6 @@ window.onclick = function (e) {
 
 // Even / odd week
 
-/* let elm = document.createElement('input');
-
-elm.type = 'week';
-
-elm.valueAsDate = new Date(1667174400000);
-
-let week = elm.value.split('W').pop();
-
-console.log(week); */
-
-/* var d = new Date(1667059674000);
-console.log(d.getSeconds()) */
 
 let DateTime = luxon.DateTime;
 const week = DateTime.now().weekNumber;
@@ -83,27 +71,23 @@ if ( week % 2 == 0 ) {
 // Saturday script
 
 
-let date = new Date();
-let day = date.getDate();
-console.log(day);
-
-switch(day) {
-    case 31: 
+switch(true) {
+    case week == 44: 
     saturday_monday.classList.add('current_sat');
     saturday_thursday.forEach(function (item) {
         item.classList.remove('current_sat');
     });
       break;
-    case 7:
+    case week == 45:
       saturday_tuesday.classList.add('current_sat');
       saturday_friday.forEach(function (item) {
         item.classList.remove('current_sat');
     });
       break;
-    case 14: 
+    case week == 46: 
       saturday_wednesday.classList.add('current_sat');
       break;
-    case 21: 
+    case week == 47: 
     saturday_friday.forEach(function (item) {
         item.classList.remove('current_sat');
     });
@@ -111,7 +95,7 @@ switch(day) {
         item.classList.add('current_sat');
     });
       break;
-    case 28: 
+    case week == 48: 
     saturday_thursday.forEach(function (item) {
         item.classList.remove('current_sat');
     });
