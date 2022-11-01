@@ -121,3 +121,18 @@ switch(day) {
       break;
 };
 
+
+// Select odd / even 
+const select = document.querySelector('select');
+
+
+select.addEventListener('change', function() {
+    if (select.value == 'even' ) {
+        wrapper_even.classList.add('current');
+        wrapper_odd.classList.remove('current');
+    } else if (select.value == 'odd') {
+        wrapper_odd.classList.add('current');
+        wrapper_even.classList.remove('current');
+    };
+});
+
