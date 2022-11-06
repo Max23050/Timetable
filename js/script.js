@@ -11,6 +11,7 @@ const saturday_tuesday = document.querySelector('.timetable__block-tue');
 const saturday_wednesday = document.querySelector('.timetable__block-wed');
 const saturday_thursday = document.querySelectorAll('.timetable__block-thu');
 const saturday_friday = document.querySelectorAll('.timetable__block-fri');
+const select = document.querySelector('select');
 
 
 
@@ -61,10 +62,12 @@ if ( week % 2 == 0 ) {
     console.log('Четная');
     wrapper_even.classList.add('current');
     wrapper_odd.classList.remove('current');
+    select.value == 'even';
 } else {
     console.log('Нечетная');
     wrapper_odd.classList.add('current');
     wrapper_even.classList.remove('current');
+    select.value == 'odd';
 };
 
 
@@ -83,6 +86,10 @@ switch(week) {
       saturday_friday.forEach(function (item) {
         item.classList.remove('current_sat');
     });
+    saturday_thursday.forEach(function (item) {
+        item.classList.remove('current_sat');
+    });
+    saturday_monday.classList.add('current_sat');
       break;
     case 46: 
       saturday_wednesday.classList.add('current_sat');
@@ -107,7 +114,7 @@ switch(week) {
 
 
 // Select odd / even 
-const select = document.querySelector('select');
+/* const select = document.querySelector('select'); */
 
 
 select.addEventListener('change', function() {
