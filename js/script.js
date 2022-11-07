@@ -9,9 +9,9 @@ const wrapper_odd = document.querySelector('.timetable__wrapper-odd');
 const saturday_monday = document.querySelector('.timetable__block-mon');
 const saturday_tuesday = document.querySelector('.timetable__block-tue');
 const saturday_wednesday = document.querySelector('.timetable__block-wed');
-const saturday_thursday = document.querySelectorAll('.timetable__block-thu');
-const saturday_friday = document.querySelectorAll('.timetable__block-fri');
-const select = document.querySelector('select');
+const saturday_thursday = document.querySelector('.timetable__block-thu');
+const saturday_friday = document.querySelector('.timetable__block-fri');
+
 
 
 
@@ -58,16 +58,20 @@ const week = DateTime.now().weekNumber;
 console.log(week)
 
 
+function setSelectValue (id, val) {
+    document.getElementById(id).value = val;
+}
+
 if ( week % 2 == 0 ) {
     console.log('Четная');
     wrapper_even.classList.add('current');
     wrapper_odd.classList.remove('current');
-    select.value == 'even';
+    setSelectValue('week', 'even');
 } else {
     console.log('Нечетная');
     wrapper_odd.classList.add('current');
     wrapper_even.classList.remove('current');
-    select.value == 'odd';
+    setSelectValue('week', 'odd');
 };
 
 
@@ -75,46 +79,30 @@ if ( week % 2 == 0 ) {
 
 
 switch(week) {
-    case 44: 
-    saturday_monday.classList.add('current_sat');
-    saturday_thursday.forEach(function (item) {
-        item.classList.remove('current_sat');
-    });
-      break;
     case 45:
       saturday_tuesday.classList.add('current_sat');
-      saturday_friday.forEach(function (item) {
-        item.classList.remove('current_sat');
-    });
-    saturday_thursday.forEach(function (item) {
-        item.classList.remove('current_sat');
-    });
-    saturday_monday.classList.add('current_sat');
+      saturday_monday.classList.add('current_sat');
       break;
     case 46: 
       saturday_wednesday.classList.add('current_sat');
+      saturday_tuesday.classList.add('current_sat');
       break;
     case 47: 
-    saturday_friday.forEach(function (item) {
-        item.classList.remove('current_sat');
-    });
-    saturday_thursday.forEach(function (item) {
-        item.classList.add('current_sat');
-    });
+      saturday_wednesday.classList.add('current_sat');
+      saturday_thursday.classList.add('current_sat');
       break;
     case 48: 
-    saturday_thursday.forEach(function (item) {
-        item.classList.remove('current_sat');
-    });
-    saturday_friday.forEach(function (item) {
-        item.classList.add('current_sat');
-    });
+      saturday_thursday.classList.add('current_sat');
+      saturday_friday.classList.add('current_sat');
       break;
+    case 49: 
+    saturday_friday.classList.add('current_sat');
+    break;
 };
 
 
 // Select odd / even 
-/* const select = document.querySelector('select'); */
+const select = document.querySelector('select');
 
 
 select.addEventListener('change', function() {
