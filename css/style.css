@@ -86,6 +86,10 @@ header {
     color: #30384b;
 }
 
+.timetable__block-type {
+    display: flex;
+}
+
 .timetable__block-type-practice {
     width: 80px;
     padding: 5px;       
@@ -111,6 +115,16 @@ header {
     background-color: rgb(62 191 62);
     text-align: center; 
     color: #fff;
+}
+
+.timetable__block-type-test {
+    width: 80px;
+    padding: 5px;       
+    border-radius: 8px;
+    background-color: rgb(191, 62, 62);
+    color: white;
+    text-align: center;
+    margin-right: 10px;
 }
 
 .timetable__block-time {
@@ -283,7 +297,7 @@ header {
         font-size: 16px;
     }
 
-    .timetable__block-type-practice, .timetable__block-type-lab, .timetable__block-type-lection {
+    .timetable__block-type-practice, .timetable__block-type-lab, .timetable__block-type-lection, .timetable__block-type-test {
         font-size: 19px;
         width: 85px;
     }
