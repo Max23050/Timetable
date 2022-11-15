@@ -117,6 +117,10 @@ header {
     color: #fff;
 }
 
+.timetable__block-type-practice, .timetable__block-type-lab, .timetable__block-type-lection {
+    margin-right: 10px;
+}
+
 .timetable__block-type-test {
     width: 80px;
     padding: 5px;       
@@ -124,7 +128,7 @@ header {
     background-color: rgb(191, 62, 62);
     color: white;
     text-align: center;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
 .timetable__block-time {
