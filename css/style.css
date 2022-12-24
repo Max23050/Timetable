@@ -76,6 +76,21 @@ header {
     border-radius: 5px;
 }
 
+.timetable__block-item-sat {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 290px;
+    height: 90%;
+    box-sizing: border-box;
+}
+
+.timetable__block-sat {
+    font-size: 28px;
+    font-weight: 600;
+}
+
 .timetable__block-title {
     font-size: 22px;
 }
