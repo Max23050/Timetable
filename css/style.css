@@ -199,22 +199,34 @@ header {
 
 .modal-container.show {
     display: flex;
-    animation-name: modalAnimation;
+    animation-name: modalContainerAnimation;
     animation-duration: 0.7s;
 }
 
 #modal_tuesday.show, #modal_wednesday.show {
     display: block;
+    animation-name: modalAnimation;
+    animation-duration: 0.7s;
 }
 
 @keyframes modalAnimation {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes modalContainerAnimation {
     from {
         opacity: 0;
     }
 
     to {
         opacity: 1;
-    }
+    } 
 }
 
 .modal {
@@ -224,7 +236,6 @@ header {
     padding: 30px 50px;
     position: relative;
     display: none;
-    /* text-align: center; */
 }
 
 .modal__title {
