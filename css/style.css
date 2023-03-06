@@ -321,6 +321,7 @@ header {
 
     .timetable__block-title {
         font-size: 25px;
+        text-align: center;
     }
 
     .timetable__block-subtitle {
