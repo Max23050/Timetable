@@ -1,7 +1,9 @@
 const openTuesday = document.querySelectorAll('.open-tuesday');
+const openWednesday = document.querySelectorAll('.open-wednesday');
 const closeModal = document.querySelectorAll('.close');
 const modalContainer = document.getElementById('modal_container');
 const modalTuesday = document.getElementById('modal_tuesday');
+const modalWednesday = document.getElementById('modal_wednesday');
 
 
 // Modal
@@ -16,6 +18,13 @@ openTuesday.forEach((item) => {
     item.addEventListener('click', function() {
         modalContainer.classList.add('show');
         modalTuesday.classList.add('show');
+    });
+});
+
+openWednesday.forEach(function (item) {
+    item.addEventListener('click', function() {
+        modalContainer.classList.add('show');
+        modalWednesday.classList.add('show');
     });
 });
 
