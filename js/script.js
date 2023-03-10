@@ -11,6 +11,7 @@ const modalWednesday = document.getElementById('modal_wednesday');
 function close() {
     modalContainer.classList.remove('show');
     modalTuesday.classList.remove('show');
+    modalWednesday.classList.remove('show');
 }
 
 
