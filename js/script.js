@@ -90,7 +90,7 @@ function addElement(col, wrapper) {
                     </div>
             `;
             const openTuesday = document.querySelectorAll('.open-tuesday');
-            console.log(openTuesday)
+            console.log(openTuesday);
             openTuesday.forEach((item) => {
                 item.addEventListener('click', function() {
                     modalContainer.classList.add('show');
