@@ -275,6 +275,10 @@ header {
     cursor: pointer;
 }
 
+#myAudio {
+    display: none;
+}
+
 
 
 /* Adaptive */
